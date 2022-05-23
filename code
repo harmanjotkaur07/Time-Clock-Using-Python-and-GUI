@@ -1,0 +1,17 @@
+import time
+from tkinter import *
+def fxn():
+    t=time.strftime('%H : %M : %S %p')
+    l.config(text=t)
+    root.after(1000,fxn)   #1000 miliseconds=1 second #after function : when we want to repeat something again and again after sometime
+
+root=Tk()
+root.geometry('364x65')
+
+l=Label(root,fg='red',bg='purple',font=('ariel',40))
+l.place(x=0,y=0)
+root.configure(bg='purple')
+fxn()
+
+
+root.mainloop()
